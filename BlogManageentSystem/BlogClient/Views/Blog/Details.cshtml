@@ -1,0 +1,52 @@
+﻿@model BlogClient.Models.BlogViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BlogViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlogId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfUpload)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfUpload)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BlogId }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.BlogId }, new { onclick = "return confirm('Are you sure to Delete?')" }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
