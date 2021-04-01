@@ -71,7 +71,7 @@ namespace BlogManageentSystem.Controllers
         }
 
         //api/blog/2
-        public HttpResponseMessage DeleteUser(int id)
+        public HttpResponseMessage DeleteBlog(int id)
         {
             Blog blog = db.Blogs.Find(id);
             if(blog != null)
